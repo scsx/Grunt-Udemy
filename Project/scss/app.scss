@@ -1,0 +1,254 @@
+html {
+    height: 100%;
+
+    body {
+        min-height: 100%;
+        height: 100%;
+        background: #282828;
+        overflow: hidden;
+        position: relative;
+    }
+}
+
+#wrapper {
+    height: 100%;
+}
+
+#options {
+    position: absolute;
+    width: 30%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding: 5vh;
+    background: #232323;
+    border-right: 1px solid #333;
+    color: #e5e5f9;
+    overflow: auto;
+
+    h1 {
+        line-height: .8;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        border-bottom: 4px solid #333;
+
+        small {
+            display: block;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+    }
+
+    .accordion {
+        label.accordion-header {
+            border-bottom: 1px solid #333;
+            margin-bottom: 30px;
+            padding-left: 0;
+            font-weight: 700;
+
+            i {
+                margin-right: 10px !important;
+            }
+        }
+
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+
+        h5 {
+            font-size: 14px;
+            font-weight: 400;
+            color: #a5a4e2;
+        }
+
+        select {
+            background: #232323;
+
+            option {
+                background: #232323;
+            }
+        }
+    }
+
+    table.imgpos {
+        td {
+            width: 20px;
+            height: 20px;
+            padding: 0;
+
+            button {
+                padding: 7px 9px;
+                font-size: 10px;
+                width: 20px;
+                height: 20px;
+                line-height: 1;
+                border: 0;
+                color: transparent;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+
+.modal.modal-lg {
+    align-items: start;
+    background: #333333e3;
+
+    .modal-overlay {
+        background: #333;
+    }
+
+    h4 {
+        margin-bottom: 0;
+    }
+
+    .btn-group {
+        margin: 30px 0 10px 0;
+    }
+
+    &#images {
+        .modal-body {
+            padding-top: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0 0 20px 0;
+            padding: 0;
+
+            li {
+                display: inline-block;
+                width: 16%;
+                padding: 5px;
+                position: relative;
+                margin-top: 0;
+            }
+        }
+
+        input[type="radio"] {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+        }
+
+        label img {
+            height: auto;
+            width: 100%;
+            transition-duration: 0.2s;
+            transform-origin: 50% 50%;
+            border: 1px solid #ddd;
+        }
+
+        :checked+label::before {
+            background-color: purple;
+            transform: scale(1);
+        }
+
+        :checked+label img {
+            z-index: -1;
+            border: 6px solid #4b48d6;
+        }
+    }
+
+    &#palettes {
+        .modal-body {
+            padding-top: 0;
+        }
+
+        #colorsGrid {
+            .column {
+                .card {
+                    margin-bottom: 20px;
+                    background-color: pruple;
+
+                    .card-header {
+                        padding-top: 8px;
+
+                        .card-title {
+                            font-weight: 600;
+                        }
+                    }
+
+                    ul {
+                        margin: 0;
+                        height: 50px;
+                        display: flex;
+                        align-items: stretch;
+                        border-bottom: .05rem solid #dadee4;
+
+                        li {
+                            margin: 0;
+                            flex-grow: 1;
+                            list-style: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+#areatela {
+    position: absolute;
+    width: 70%;
+    height: 100vh;
+    left: 30%;
+
+    #tela {
+        position: absolute;
+        width: 70vh;
+        height: 70vh;
+        top: 6vh;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &.fullwidth {
+            width: 100%;
+            left: 0;
+            transform: translateX(0);
+        }
+
+        #back {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+        }
+
+        #imageholder {
+            position: absolute;
+            z-index: 3;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: bottom center;
+        }
+
+        #divs {
+            position: absolute;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            &.show {
+                overflow: visible;
+            }
+
+            .shape {
+                position: absolute;
+            }
+        }
+    }
+}
