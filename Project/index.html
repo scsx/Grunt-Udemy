@@ -2,32 +2,33 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Bauhaus!</title>
     <!-- <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700" rel="stylesheet"> -->
-    <link rel="stylesheet" href="node_modules/spectre.css/dist/spectre.min.css">
-    <link rel="stylesheet" href="node_modules/spectre.css/dist/spectre-exp.min.css">
-    <link rel="stylesheet" href="node_modules/spectre.css/dist/spectre-icons.min.css">
-    <link rel="stylesheet" href="css/app-prefixed.css">
+    <link rel="stylesheet" href="node_modules/spectre.css/dist/spectre.min.css" />
+    <link rel="stylesheet" href="node_modules/spectre.css/dist/spectre-exp.min.css" />
+    <link rel="stylesheet" href="node_modules/spectre.css/dist/spectre-icons.min.css" />
+    <link rel="stylesheet" href="css/app.min.css" />
 </head>
 
 <body>
-
     <div id="wrapper">
-
         <div id="options">
-            <h1 class="text-secondary">Bauhaus image generator
-                <small class="author">by <a href="https://github.com/scsx" target="_blank">scsx</a></small>
+            <h1 class="text-secondary">
+                Bauhaus image generator
+                <small class="author">by
+                    <a href="https://github.com/scsx" target="_blank">scsx</a></small>
             </h1>
 
             <div class="accordion-container">
                 <div class="accordion">
                     <input id="accordion-getting-started" type="checkbox" name="docs-accordion-checkbox" checked
-                        hidden="">
+                        hidden="" />
                     <label class="accordion-header c-hand" for="accordion-getting-started"><i
-                            class="icon icon-arrow-right mr-1"></i>Image & Colors</label>
+                            class="icon icon-arrow-right mr-1"></i>Image &
+                        Colors</label>
                     <div class="accordion-body">
                         <div class="columns">
                             <div class="column col-6">
@@ -70,11 +71,11 @@
                                 <a class="btn btn-primary" href="#palettes">Choose colors</a>
                             </div>
                         </div>
-
                     </div>
-                </div><!-- IMAGE -->
+                </div>
+                <!-- IMAGE -->
                 <div class="accordion">
-                    <input id="accordion-layout" type="checkbox" name="docs-accordion-checkbox" checked hidden="">
+                    <input id="accordion-layout" type="checkbox" name="docs-accordion-checkbox" checked hidden="" />
                     <label class="accordion-header c-hand" for="accordion-layout"><i
                             class="icon icon-arrow-right mr-1"></i>Layout</label>
                     <div class="accordion-body">
@@ -83,7 +84,7 @@
                                 <div class="form-group">
                                     <h5>Width 100%</h5>
                                     <label class="form-switch">
-                                        <input type="checkbox" id="w100">
+                                        <input type="checkbox" id="w100" />
                                         <i class="form-icon"></i>
                                     </label>
                                 </div>
@@ -92,7 +93,7 @@
                                 <div class="form-group">
                                     <h5>Overflow</h5>
                                     <label class="form-switch">
-                                        <input type="checkbox" id="overflow">
+                                        <input type="checkbox" id="overflow" />
                                         <i class="form-icon"></i>
                                     </label>
                                 </div>
@@ -103,27 +104,31 @@
                             <h5>Min/max stripes (back)</h5>
                             <div class="columns">
                                 <div class="column col-6">
-                                    <input class="slider tooltip" type="range" min="1" max="20" value="5" id="backMin">
+                                    <input class="slider tooltip" type="range" min="1" max="20" value="5"
+                                        id="backMin" />
                                 </div>
                                 <div class="column col-6">
-                                    <input class="slider tooltip" type="range" min="1" max="50" value="10" id="backMax">
+                                    <input class="slider tooltip" type="range" min="1" max="50" value="10"
+                                        id="backMax" />
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div><!-- BACKGROUND -->
+                </div>
+                <!-- BACKGROUND -->
                 <div class="accordion">
-                    <input id="accordion-elements" type="checkbox" name="docs-accordion-checkbox" checked hidden="">
+                    <input id="accordion-elements" type="checkbox" name="docs-accordion-checkbox" checked hidden="" />
                     <label class="accordion-header c-hand" for="accordion-elements"><i
                             class="icon icon-arrow-right mr-1"></i>Elements</label>
                     <div class="accordion-body">
                         <div class="form-group">
                             <h5>Shapes</h5>
                             <label class="form-radio form-inline">
-                                <input type="radio" name="shape" checked=""><i class="form-icon"></i> Rectangles
+                                <input type="radio" name="shape" checked="" /><i class="form-icon"></i> Rectangles
                             </label>
                             <label class="form-radio form-inline">
-                                <input type="radio" name="shape"><i class="form-icon"></i> Circles
+                                <input type="radio" name="shape" /><i class="form-icon"></i>
+                                Circles
                             </label>
                         </div>
 
@@ -132,23 +137,27 @@
                             <div class="columns">
                                 <div class="column col-6">
                                     <input class="slider tooltip" type="range" min="0" max="20" value="3"
-                                        oninput="this.setAttribute('value', this.value);" id="frontMin">
+                                        oninput="this.setAttribute('value', this.value);" id="frontMin" />
                                 </div>
                                 <div class="column col-6">
                                     <input class="slider tooltip" type="range" min="0" max="50" value="10"
-                                        oninput="this.setAttribute('value', this.value);" id="frontMax">
+                                        oninput="this.setAttribute('value', this.value);" id="frontMax" />
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div><!-- DIVS -->
+                </div>
+                <!-- DIVS -->
             </div>
 
             <div class="btn-group btn-group-block">
-                <button class="btn btn-success btn-lg" id="mainRedraw">Redraw</button>
-                <button class="btn bg-dark btn-lg" id="">Screenshot (β)</button>
+                <button class="btn btn-success btn-lg" id="mainRedraw">
+                    Redraw
+                </button>
+                <button class="btn bg-dark btn-lg" id="">
+                    Screenshot (β)
+                </button>
             </div>
-
         </div>
 
         <div id="areatela">
@@ -158,7 +167,6 @@
                 <div id="divs"></div>
             </div>
         </div>
-
 
         <div class="modal modal-lg" id="images">
             <!-- To make a modal appear, add the active class to the modal container. -->
@@ -173,59 +181,60 @@
                         <ul>
                             <li>
                                 <input name="imageurl" type="radio" />
-                                <label><img src="dist/img/empty.png" /></label>
+                                <label><img src="img/empty.png" /></label>
                             </li>
                             <li>
                                 <input name="imageurl" type="radio" />
-                                <label><img src="dist/img/britishlibrary-11158378376.png" /></label>
+                                <label><img src="img/britishlibrary-11158378376.png" /></label>
                             </li>
                             <li>
                                 <input name="imageurl" type="radio" />
-                                <label><img src="dist/img/britishlibrary-11306853283.png" /></label>
+                                <label><img src="img/britishlibrary-11306853283.png" /></label>
                             </li>
                             <li>
                                 <input name="imageurl" type="radio" />
-                                <label><img src="dist/img/britishlibrary-12459031975.png" /></label>
+                                <label><img src="img/britishlibrary-12459031975.png" /></label>
                             </li>
                             <li>
                                 <input name="imageurl" type="radio" />
-                                <label><img src="dist/img/fdr.png" /></label>
+                                <label><img src="img/fdr.png" /></label>
                             </li>
                             <li>
                                 <input name="imageurl" type="radio" />
-                                <label><img src="dist/img/britishlibrary-11299952284.png" /></label>
+                                <label><img src="img/britishlibrary-11299952284.png" /></label>
                             </li>
                             <li>
                                 <input name="imageurl" type="radio" />
-                                <label><img src="dist/img/britishlibrary-12459366944.png" /></label>
+                                <label><img src="img/britishlibrary-12459366944.png" /></label>
                             </li>
                             <li>
                                 <input name="imageurl" type="radio" />
-                                <label><img src="dist/img/britishlibrary-11249708046.png" /></label>
+                                <label><img src="img/britishlibrary-11249708046.png" /></label>
                             </li>
                             <li>
                                 <input name="imageurl" type="radio" />
-                                <label><img src="dist/img/britishlibrary-11301719536.png" /></label>
+                                <label><img src="img/britishlibrary-11301719536.png" /></label>
                             </li>
                             <li>
                                 <input name="imageurl" type="radio" />
-                                <label><img src="dist/img/britishlibrary-11052019015.png" /></label>
+                                <label><img src="img/britishlibrary-11052019015.png" /></label>
                             </li>
                             <li>
                                 <input name="imageurl" type="radio" />
-                                <label><img src="dist/img/smith-and-wesson-938834_1280.png" /></label>
+                                <label><img src="img/smith-and-wesson-938834_1280.png" /></label>
                             </li>
                             <li>
                                 <input name="imageurl" type="radio" />
-                                <label><img src="dist/img/bananas_640.png" /></label>
+                                <label><img src="img/bananas_640.png" /></label>
                             </li>
                             <li>
                                 <input name="imageurl" type="radio" />
-                                <label><img src="dist/img/skull.png" /></label>
+                                <label><img src="img/skull.png" /></label>
                             </li>
                         </ul>
-                        <div class="input-group"><span class="input-group-addon">Or enter URL</span>
-                            <input class="form-input" type="text" placeholder="image adress" id="imagePath">
+                        <div class="input-group">
+                            <span class="input-group-addon">Or enter URL</span>
+                            <input class="form-input" type="text" placeholder="image adress" id="imagePath" />
                         </div>
                         <div class="btn-group">
                             <a href="#close" class="btn btn-success btn-lg" id="chooseImage">Choose</a>
@@ -244,7 +253,6 @@
                 </div>
                 <div class="modal-body">
                     <div class="content">
-
                         <div class="columns" id="colorsGrid"></div>
 
                         <div class="btn-group my-2">
@@ -254,11 +262,13 @@
                 </div>
             </div>
         </div>
-
     </div>
-    <script type="text/javascript" src="dist/js/draw.js"></script>
-    <script type="text/javascript" src="dist/js/defaults.js"></script>
-    <script type="text/javascript" src="dist/js/interface.js"></script>
+    <!--
+    <script type="text/javascript" src="js/draw.js"></script>
+    <script type="text/javascript" src="js/defaults.js"></script>
+    <script type="text/javascript" src="js/interface.js"></script>
+    -->
+    <script type="text/javascript" src="js/min/bauhaus.min.js"></script>
 </body>
 
 </html>
